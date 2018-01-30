@@ -5,12 +5,12 @@ function preload(){
 }
 
 function setup(){
-    createCanvas(600,400);
+    createCanvas(userUpload.width, userUpload.height);
 }
 
 function draw(){
     background(0);
-    
+    image(userUpload, 0, 0);
     loadPixels();
     
     for(var row = 0; row < height; row++){
