@@ -17,10 +17,15 @@ function draw(){
         for(var col = 0; col < width; col++){
             var startingIndex = (col + row * width)*4;
             
-            // pixels[startingIndex] = 255; //red
-            // pixels[startingIndex + 1] = 0; //green
-            // pixels[startingIndex + 2] = 0; //blue
-            // pixels[startingIndex + 3] = 255; //alpha
+            var r = pixels[startingIndex];
+            var g = pixels[startingIndex + 1];
+            var b = pixels[startingIndex + 2];
+            var a = pixels[startingIndex + 3];
+            
+            pixels[startingIndex] = r; //red
+            pixels[startingIndex + 1] = g; //green
+            pixels[startingIndex + 2] = b; //blue
+            pixels[startingIndex + 3] = a; //alpha
         }
     }
     
