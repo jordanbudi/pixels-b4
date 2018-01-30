@@ -22,13 +22,19 @@ function draw(){
             var b = pixels[startingIndex + 2];
             var a = pixels[startingIndex + 3];
             
-            pixels[startingIndex] = r; //red
-            pixels[startingIndex + 1] = g; //green
-            pixels[startingIndex + 2] = b; //blue
-            pixels[startingIndex + 3] = a; //alpha
+            if(keyIsPressed){
+                if(key=="1"){
+                    gray_filter(startingIndex, g, a);
+                }
+            }
         }
     }
-    
-    
     updatePixels();
+}
+
+function gray_filter(startingIndex, g, a){
+    pixels[startingIndex + 0] = g; //red
+    pixels[startingIndex + 1] = g; //green
+    pixels[startingIndex + 2] = g; //blue
+    pixels[startingIndex + 3] = a; //alpha
 }
