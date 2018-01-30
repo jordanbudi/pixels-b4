@@ -1,3 +1,9 @@
+var userUpload;
+
+function preload(){
+    userUpload = loadImage("jenny.jpg");
+}
+
 function setup(){
     createCanvas(600,400);
 }
@@ -11,10 +17,10 @@ function draw(){
         for(var col = 0; col < width; col++){
             var startingIndex = (col + row * width)*4;
             
-            pixels[startingIndex] = row; //red
-            pixels[startingIndex + 1] = 0; //green
-            pixels[startingIndex + 2] = col; //blue
-            pixels[startingIndex + 3] = 255; //alpha
+            // pixels[startingIndex] = 255; //red
+            // pixels[startingIndex + 1] = 0; //green
+            // pixels[startingIndex + 2] = 0; //blue
+            // pixels[startingIndex + 3] = 255; //alpha
         }
     }
     
